@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-padding {
-  padding: 100px 0;
+  padding: 70px 0;
 }
 
 /* Glassmorphism Card Style */
@@ -1056,10 +1056,22 @@ footer {
   }
   
   .section-padding {
-    padding: 60px 0;
+    padding: 45px 0;
   }
   
   .form-group-row {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .trust-bar-split {
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-top: 15px;
+  }
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
   }
 }
