@@ -3,5 +3,5 @@ deployment:
   tasks:
     # IMPORTANT: Replace 'your_cpanel_username' with your actual cPanel username
     # You can find your username in the cPanel sidebar under "Current User" or "Home Directory"
-    - export DEPLOYPATH=/home/your_cpanel_username/public_html
+    - export DEPLOYPATH=/home2/mehar/public_html
     - /bin/rsync -a --exclude=".git*" website_prepped_for_cpanel/ $DEPLOYPATH/
