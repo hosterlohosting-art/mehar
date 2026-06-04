@@ -67,6 +67,14 @@
       }
     ]
     </script>
+    <!-- Google Analytics (GA4) - Replace G-XXXXXXXXXX with your Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
   </head>
   <body>
     <!-- Header -->
@@ -78,8 +86,10 @@
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="services.html" class="nav-link active">Services</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
           <li><a href="blog.html" class="nav-link">Blog</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><button class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
           <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
         </ul>
         
@@ -183,6 +193,47 @@
       </div>
     </section>
 
+    <!-- How I Work - Process Timeline -->
+    <section class="section-padding" style="background: rgba(255,255,255,0.15);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">My Process</span>
+          <h2 class="section-title">How I Work</h2>
+          <p class="section-subtitle">A proven 4-step workflow that delivers results on time, every time.</p>
+        </div>
+        
+        <div class="process-timeline">
+          <div class="process-step reveal">
+            <div class="process-icon">🔍</div>
+            <div class="process-step-num">Step 01</div>
+            <h3 class="process-step-title">Discovery</h3>
+            <p class="process-step-desc">Understanding your business goals, target audience, brand identity, and technical requirements through a detailed consultation.</p>
+          </div>
+          
+          <div class="process-step reveal" style="transition-delay: 150ms;">
+            <div class="process-icon">🎨</div>
+            <div class="process-step-num">Step 02</div>
+            <h3 class="process-step-title">Design</h3>
+            <p class="process-step-desc">Creating wireframes, high-fidelity UI mockups, and interactive prototypes in Figma for your review and approval.</p>
+          </div>
+          
+          <div class="process-step reveal" style="transition-delay: 300ms;">
+            <div class="process-icon">💻</div>
+            <div class="process-step-num">Step 03</div>
+            <h3 class="process-step-title">Develop</h3>
+            <p class="process-step-desc">Writing clean, responsive code with modern frameworks. Building out every feature, integration, and interaction to pixel-perfection.</p>
+          </div>
+          
+          <div class="process-step reveal" style="transition-delay: 450ms;">
+            <div class="process-icon">🚀</div>
+            <div class="process-step-num">Step 04</div>
+            <h3 class="process-step-title">Launch</h3>
+            <p class="process-step-desc">Testing across devices, deploying to production, setting up SEO, analytics, and handing over complete documentation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Bottom Contact Form (CTA Form Everywhere) -->
     <section class="section-padding cta-section" style="background: rgba(255,255,255,0.15);">
       <div class="container">
@@ -247,6 +298,15 @@
         </ul>
 
         
+
+        <div style="margin-top: 16px;">
+          <p style="font-size: 12px; color: var(--text-light); margin-bottom: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Get Free Web Design Tips</p>
+          <form class="footer-newsletter" onsubmit="return false;">
+            <input type="email" class="newsletter-input" placeholder="Your email address" required />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+
         <div class="footer-copy">
           <p>© 2026 Mehar Hassan. All rights reserved. | Owner of <a href="https://digioverse.com" target="_blank" rel="noopener" style="color: var(--primary-gold); font-weight: 600;">Digioverse</a></p>
         </div>

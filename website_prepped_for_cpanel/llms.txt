@@ -18,6 +18,14 @@ Official portfolio of Mehar Hassan, Founder & Owner of Digioverse. This document
 2. **Creative UI/UX Design:** User interface mockups, wireframes, custom visual styles, and responsive mobile-first layouts designed in Figma.
 3. **E-Commerce Solutions:** Scalable online storefronts with secure checkouts and integrations (Next.js, Shopify, Stripe, PayPal).
 4. **Performance & SEO:** Google Lighthouse speed optimizations, structural schema injection, and keyword-focused on-page copywriting to rank high on US search engines.
+5. **Interactive Experience:** Standard dark mode preference, animated count-up statistics, infinite client marquee, back-to-top navigation, and client testimonial sliders.
+
+## Pricing Packages
+* **Starter Package ($500 - $1,500):** Landing page, responsive design, basic SEO, contact form, 1 revision round, 2-week delivery.
+* **Professional Package ($2,000 - $5,000):** Up to 8 pages, custom UI/UX design in Figma, advanced SEO & schema, blog, CMS, 3 revision rounds, 4-week delivery.
+* **Enterprise Package ($5,000+):** Full-stack web app, SaaS dashboard, API integrations, database architecture, ongoing support, custom timeline.
+* **Details & FAQs:** See the official pricing page at https://meharhassan.com/pricing.html
+
 
 ## Key Projects
 * **Omnilo Dev:** Custom admin dashboard and client analytics portal built with React and Node.js.

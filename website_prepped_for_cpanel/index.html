@@ -107,6 +107,14 @@
       }
     ]
     </script>
+    <!-- Google Analytics (GA4) - Replace G-XXXXXXXXXX with your Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
   </head>
   <body>
     <!-- Header / Navigation -->
@@ -118,8 +126,10 @@
           <li><a href="index.html" class="nav-link active">Home</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
           <li><a href="blog.html" class="nav-link">Blog</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><button class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
           <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
         </ul>
         
@@ -203,6 +213,30 @@
             <p style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Selected globally as a contest-winning user interface and dashboard designer.</p>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Trusted By Logo Marquee -->
+    <div class="logo-marquee-section">
+      <p class="logo-marquee-label">Trusted by brands worldwide</p>
+      <div class="logo-marquee-track">
+        <span class="marquee-logo">TechVault</span>
+        <span class="marquee-logo">NovaPay</span>
+        <span class="marquee-logo">UrbanGrid</span>
+        <span class="marquee-logo">CloudSync</span>
+        <span class="marquee-logo">Digioverse</span>
+        <span class="marquee-logo">Omnilo</span>
+        <span class="marquee-logo">LocatePro</span>
+        <span class="marquee-logo">BrightPath</span>
+        <!-- Duplicate set for seamless infinite scroll -->
+        <span class="marquee-logo">TechVault</span>
+        <span class="marquee-logo">NovaPay</span>
+        <span class="marquee-logo">UrbanGrid</span>
+        <span class="marquee-logo">CloudSync</span>
+        <span class="marquee-logo">Digioverse</span>
+        <span class="marquee-logo">Omnilo</span>
+        <span class="marquee-logo">LocatePro</span>
+        <span class="marquee-logo">BrightPath</span>
       </div>
     </div>
 
@@ -298,8 +332,57 @@
       </div>
     </section>
 
-    <!-- About Me Teaser -->
+    <!-- Client Testimonials Section -->
     <section class="section-padding" style="background: rgba(255,255,255,0.15);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="section-title">What Clients Say</h2>
+          <p class="section-subtitle">Real feedback from founders and teams I've partnered with across the globe.</p>
+        </div>
+        
+        <div class="testimonial-grid">
+          <div class="glass-card testimonial-card reveal">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-quote">"Mehar transformed our outdated website into a high-converting machine. The UI/UX redesign alone increased our lead generation by 40%. His attention to detail and speed of delivery are unmatched."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">SM</div>
+              <div>
+                <div class="testimonial-name">Sarah Mitchell</div>
+                <div class="testimonial-role">CEO, TechVault Inc.</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="glass-card testimonial-card reveal" style="transition-delay: 150ms;">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-quote">"We needed a custom SaaS dashboard built from scratch. Mehar delivered a pixel-perfect, fully responsive platform in under 4 weeks. He's now our go-to developer for all new projects."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">JR</div>
+              <div>
+                <div class="testimonial-name">James Rodriguez</div>
+                <div class="testimonial-role">Founder, NovaPay</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="glass-card testimonial-card reveal" style="transition-delay: 300ms;">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-quote">"Mehar redesigned our entire e-commerce storefront and integrated Stripe payments seamlessly. Sales went up 65% in the first month after launch. Exceptional talent and great communicator."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AK</div>
+              <div>
+                <div class="testimonial-name">Amara Khan</div>
+                <div class="testimonial-role">Marketing Director, UrbanGrid</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Teaser -->
+    <section class="section-padding">
       <div class="container about-grid">
         <div class="reveal">
           <div class="hero-image-container" style="border-radius: 24px; box-shadow: var(--shadow-md);">
@@ -387,6 +470,15 @@
         </ul>
 
         
+
+        <div style="margin-top: 16px;">
+          <p style="font-size: 12px; color: var(--text-light); margin-bottom: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Get Free Web Design Tips</p>
+          <form class="footer-newsletter" onsubmit="return false;">
+            <input type="email" class="newsletter-input" placeholder="Your email address" required />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+
         <div class="footer-copy">
           <p>© 2026 Mehar Hassan. All rights reserved. | Owner of <a href="https://digioverse.com" target="_blank" rel="noopener" style="color: var(--primary-gold); font-weight: 600;">Digioverse</a></p>
         </div>

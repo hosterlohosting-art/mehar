@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-        observer.unobserve(entry.target); // Stop observing once animated
+        observer.unobserve(entry.target);
       }
     });
   }, {
@@ -34,18 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       
       const submitBtn = form.querySelector('.btn-form');
-      const originalBtnText = submitBtn.textContent;
       submitBtn.textContent = 'Sending Message...';
       submitBtn.disabled = true;
       
-      // Simulate API submit delay (usually 1s)
       setTimeout(() => {
-        // Render Success State inside the form card
         const cardParent = form.closest('.glass-card') || form.closest('.cta-box');
         if (cardParent) {
           const nameInput = form.querySelector('input[type="text"]')?.value || 'Guest';
-          
-          // Re-render HTML with a premium success state
           const formSection = form.closest('.cta-form') || form;
           formSection.innerHTML = `
             <div class="form-success-message reveal active" style="opacity: 1; transform: translateY(0);">
@@ -72,21 +67,20 @@ document.addEventListener('DOMContentLoaded', () => {
       navMenu.classList.toggle('mobile-open');
       menuBtn.classList.toggle('menu-active');
       
-      // Style toggle for burger menu lines
       const spans = menuBtn.querySelectorAll('span');
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
       if (menuBtn.classList.contains('menu-active')) {
         spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
         spans[1].style.opacity = '0';
         spans[2].style.transform = 'rotate(-45deg) translate(7px, -8px)';
         
-        // Add full-screen mobile menu styles dynamically
         navMenu.style.display = 'flex';
         navMenu.style.flexDirection = 'column';
         navMenu.style.position = 'fixed';
         navMenu.style.top = '70px';
         navMenu.style.left = '0';
         navMenu.style.width = '100%';
-        navMenu.style.background = 'rgba(255, 255, 255, 0.95)';
+        navMenu.style.background = isDark ? 'rgba(11, 17, 32, 0.95)' : 'rgba(255, 255, 255, 0.95)';
         navMenu.style.backdropFilter = 'blur(15px)';
         navMenu.style.padding = '40px 24px';
         navMenu.style.borderBottom = '1px solid rgba(15, 23, 42, 0.08)';
@@ -99,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     
-    // Close menu when clicking a link
     navMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         if (menuBtn.classList.contains('menu-active')) {
@@ -122,4 +115,100 @@ document.addEventListener('DOMContentLoaded', () => {
     </svg>
   `;
   document.body.appendChild(floatWs);
+
+  // 6. Dark Mode Toggle
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+
+  const themeToggle = document.querySelector('.theme-toggle');
+  if (themeToggle) {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    themeToggle.textContent = isDark ? '☀️' : '🌙';
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      if (currentTheme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        themeToggle.textContent = '🌙';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggle.textContent = '☀️';
+      }
+    });
+  }
+
+  // 7. Animated Stats Counter
+  const statNums = document.querySelectorAll('.stat-num');
+  if (statNums.length > 0) {
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const text = el.textContent.trim();
+          const match = text.match(/^(\d+)(.*)$/);
+          if (match) {
+            const target = parseInt(match[1], 10);
+            const suffix = match[2] || '';
+            let current = 0;
+            const duration = 2000;
+            const step = Math.max(1, Math.floor(target / (duration / 30)));
+            const interval = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                current = target;
+                clearInterval(interval);
+              }
+              el.innerHTML = `${current}<span>${suffix}</span>`;
+            }, 30);
+          }
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    statNums.forEach(el => counterObserver.observe(el));
+  }
+
+  // 8. Back-to-Top Button
+  const backToTop = document.createElement('button');
+  backToTop.className = 'back-to-top';
+  backToTop.setAttribute('aria-label', 'Back to top');
+  backToTop.innerHTML = '↑';
+  document.body.appendChild(backToTop);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // 9. Newsletter Form Handling
+  const newsletterForms = document.querySelectorAll('.newsletter-form, .footer-newsletter');
+  newsletterForms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailInput = form.querySelector('.newsletter-input');
+      const btn = form.querySelector('.newsletter-btn');
+      if (emailInput && emailInput.value) {
+        btn.textContent = 'Subscribed ✓';
+        btn.disabled = true;
+        btn.style.background = '#10b981';
+        btn.style.color = 'white';
+        emailInput.disabled = true;
+        emailInput.value = '';
+        emailInput.placeholder = 'Thank you!';
+      }
+    });
+  });
 });
