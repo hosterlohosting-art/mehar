@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocatePro Case Study | Geolocation Web App | Mehar Hassan</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="title" content="LocatePro Case Study | Geolocation Web App | Mehar Hassan" />
+    <meta name="description" content="Case study of LocatePro, a high-speed geolocation search tool and interactive map visualizer developed by Mehar Hassan for a commercial real estate agency." />
+    <meta name="keywords" content="geolocation web application, interactive map Leaflet, real estate database search, custom API integration" />
+    <meta name="author" content="Mehar Hassan" />
+    <meta name="robots" content="index, follow" />
+    
+    <link rel="canonical" href="https://meharhassan.com/case-study-locatepro.html" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container nav-container">
+        <a href="index.html" class="logo">MEHAR HASSAN<span>.</span></a>
+        
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
+        </ul>
+        
+        <button class="menu-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Case Study Content -->
+    <article class="container article-container">
+      <div class="article-header reveal">
+        <span class="article-category">Case Study • Geolocation App</span>
+        <h1 class="article-main-title text-gradient">LocatePro: High-Speed Property Search & Geolocation Mapper</h1>
+        
+        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 24px; font-size: 13px; color: var(--text-muted);">
+          <div><strong>Role:</strong> Front-End Developer & UI Designer</div>
+          <div><strong>Stack:</strong> React, Leaflet Maps, Geolocation API, CSS Grid</div>
+          <div><strong>Timeline:</strong> 3 Weeks</div>
+        </div>
+      </div>
+
+      <div class="article-content reveal" style="transition-delay: 150ms;">
+        <p>A leading boutique commercial real estate firm in the USA needed a platform to visualize their portfolio properties. Their previous database listed over 5,000 properties, but filtering them by location, zoning laws, and size was slow and frustrating for their brokers.</p>
+        
+        <p>I designed and developed LocatePro, an interactive mapping tool that visualizes business geolocation points with custom visual filters.</p>
+
+        <h2>The Challenge</h2>
+        <p>Brokers were losing leads because property searches were slow:</p>
+        <ul>
+          <li><strong>Slow Mapping:</strong> The browser would crash or freeze when rendering thousands of pinpoints at once.</li>
+          <li><strong>Clunky Filtering:</strong> Users had to fill in long forms and click submit, waiting for a full page refresh on every search.</li>
+          <li><strong>Layout Shift:</strong> On mobile screens, the map dimensions shifted constantly, blocking usability.</li>
+        </ul>
+
+        <h2>The Solution</h2>
+        <p>I engineered a performant frontend and custom Leaflet API wrapper:</p>
+        <ol>
+          <li><strong>Map Rendering Optimization:</strong> Implemented canvas marker clustering to cluster thousands of properties into clean nodes. This prevents browser thread blocking and allowed the map to render instantly.</li>
+          <li><strong>Fluid Real-time Filtering:</strong> Programmed client-side state filters. When a user checks a zoning filter or changes a size slider, properties update instantly on the map without loading latency.</li>
+          <li><strong>Responsive Design System:</strong> Designed a split-pane layout (map on one side, clean list cards on the other) using CSS Flexbox. It shifts to a tabbed map/list view on mobile screens.</li>
+        </ol>
+
+        <blockquote>
+          "Our brokers can now locate commercial listings for clients on their phones in seconds. LocatePro changed how we do deals."
+        </blockquote>
+
+        <h2>The Results</h2>
+        <p>The application delivered high client satisfaction:</p>
+        <ul>
+          <li><strong>3x faster</strong> property finding times for brokers.</li>
+          <li><strong>100% database accuracy</strong> synced with real-time property details.</li>
+          <li>Zero browser freezing, even when displaying thousands of listings simultaneously.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Bottom Contact Form (CTA Form Everywhere) -->
+    <section class="section-padding cta-section" style="background: rgba(255,255,255,0.15);">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div class="cta-text">
+            <h2>Build an Interactive Web App</h2>
+            <p>Do you need custom map integrations, real-time database filtering, or responsive geolocation tools for your business? Let's connect.</p>
+            <div style="margin-top: 30px;">
+              <p style="margin-bottom: 8px; font-weight: 600; color: white;">Email directly:</p>
+              <a href="mailto:hello@meharhassan.com" style="color: var(--primary-gold); font-size: 20px; font-weight: 700; text-decoration: underline;">hello@meharhassan.com</a>
+            </div>
+          </div>
+          
+          <div class="cta-form">
+            <form class="contact-form-element">
+              <div class="form-group-row">
+                <input type="text" class="form-input" placeholder="Your Name" required />
+                <input type="email" class="form-input" placeholder="Your Email" required />
+              </div>
+              <input type="text" class="form-input" placeholder="Web Concept" required />
+              <textarea class="form-input form-textarea" placeholder="Tell me about your mapping or database goals..." required></textarea>
+              <button type="submit" class="btn-form">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-grid">
+        <a href="index.html" class="logo">MEHAR HASSAN<span>.</span></a>
+        
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="services.html" class="footer-link">Services</a></li>
+          <li><a href="blog.html" class="footer-link">Blog</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+        
+        <div class="footer-copy">
+          <p>© 2026 Mehar Hassan. All rights reserved. | Owner of <a href="https://digioverse.com" target="_blank" rel="noopener" style="color: var(--primary-gold); font-weight: 600;">Digioverse</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Master JS -->
+    <script src="./script.js"></script>
+  </body>
+</html>
