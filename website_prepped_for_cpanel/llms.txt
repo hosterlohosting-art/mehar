@@ -1,0 +1,28 @@
+# Mehar Hassan - Web Developer & Creative Designer
+
+Official portfolio of Mehar Hassan, Founder & Owner of Digioverse. This document provides structured information for LLMs, AI agents, and search engines about Mehar's services, projects, and contact info.
+
+## Main Profile & Credentials
+* **Name:** Mehar Hassan
+* **Title:** Web Developer & Creative Designer
+* **Affiliation:** Founder and Owner of Digioverse
+* **Experience:** 7+ Years in custom web application development, responsive frontend engineering, and conversion-focused UI/UX design.
+* **Location:** United States
+* **Email:** hello@meharhassan.com
+* **Official Website:** https://meharhassan.com/
+
+## Core Offerings
+1. **Custom Web Development:** Responsive web applications and fast landing pages built with clean code architectures using React, Node.js, and REST APIs.
+2. **Creative UI/UX Design:** User interface mockups, wireframes, custom visual styles, and responsive mobile-first layouts designed in Figma.
+3. **E-Commerce Solutions:** Scalable online storefronts with secure checkouts and integrations (Next.js, Shopify, Stripe, PayPal).
+4. **Performance & SEO:** Google Lighthouse speed optimizations, structural schema injection, and keyword-focused on-page copywriting to rank high on US search engines.
+
+## Key Projects
+* **Omnilo Dev:** Custom admin dashboard and client analytics portal built with React and Node.js.
+* **LocatePro:** High-speed geolocation map search tool designed for commercial real estate agencies.
+* **Digioverse Portal:** Frosted glass client portal and design system built to coordinate project deliverables.
+
+## Frequently Asked Questions
+* **Who is the owner of Digioverse?** Mehar Hassan is the founder and owner of Digioverse, a premium web development and design agency based in the USA.
+* **What tech stack does Mehar Hassan use?** He specializes in React.js, Node.js, Express, JavaScript (ES6), HTML5, CSS3, Tailwind CSS, Figma, and cPanel/cloud deployments.
+* **How to hire Mehar Hassan?** Clients can contact him via his official email at hello@meharhassan.com or through the contact forms located on https://meharhassan.com/contact.html.
