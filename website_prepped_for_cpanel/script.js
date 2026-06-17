@@ -211,4 +211,75 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 10. Dynamic Typing Animation Loop
+  const typingText = document.querySelector('.typing-text');
+  if (typingText) {
+    const wordsAttr = typingText.getAttribute('data-words');
+    if (wordsAttr) {
+      const words = JSON.parse(wordsAttr);
+      let wordIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let currentText = '';
+      
+      function type() {
+        const currentWord = words[wordIndex];
+        if (isDeleting) {
+          currentText = currentWord.substring(0, charIndex - 1);
+          charIndex--;
+        } else {
+          currentText = currentWord.substring(0, charIndex + 1);
+          charIndex++;
+        }
+        
+        typingText.textContent = currentText;
+        
+        let typeSpeed = isDeleting ? 40 : 80;
+        
+        if (!isDeleting && currentText === currentWord) {
+          typeSpeed = 1800; // Pause at full word
+          isDeleting = true;
+        } else if (isDeleting && currentText === '') {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          typeSpeed = 500; // Pause before typing next word
+        }
+        
+        setTimeout(type, typeSpeed);
+      }
+      
+      // Start the typing loop
+      setTimeout(type, 800);
+    }
+  }
+
+  // 11. 3D Glass Card Hover Tilt Effect (Desktop Only)
+  if (window.innerWidth > 768) {
+    const cards = document.querySelectorAll('.glass-card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left; // x position within the element
+        const y = e.clientY - rect.top;  // y position within the element
+        
+        const xc = rect.width / 2;
+        const yc = rect.height / 2;
+        
+        const dx = x - xc;
+        const dy = y - yc;
+        
+        const tiltX = -(dy / yc) * 6; // max 6 degrees tilt
+        const tiltY = (dx / xc) * 6;
+        
+        card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateY(-6px)`;
+        card.style.transition = 'transform 0.1s ease, box-shadow var(--transition-smooth), border-color var(--transition-smooth), background var(--transition-smooth)';
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.transition = '';
+      });
+    });
+  }
 });

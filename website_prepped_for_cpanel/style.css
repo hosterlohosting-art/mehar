@@ -262,6 +262,19 @@ header.scrolled {
   margin-bottom: 24px;
 }
 
+.typing-cursor {
+  font-weight: 200;
+  color: var(--primary-gold);
+  -webkit-text-fill-color: var(--primary-gold);
+  animation: blink 0.8s infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 .hero-description {
   font-size: 18px;
   color: var(--text-muted);
