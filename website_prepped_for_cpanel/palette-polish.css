@@ -1,0 +1,54 @@
+/* Cohesive editorial palette: ink, parchment, ivory, coral */
+:root {
+  --e-bg:#f0ede6;
+  --e-ink:#111111;
+  --e-line:#b9b3a9;
+  --e-hot:#f04f35;
+  --e-blue:#f04f35;
+}
+
+/* Experience accents — remove electric blue */
+#experience .experience-role,
+#experience .portfolio-link,
+html[data-theme="dark"] #experience .experience-role,
+html[data-theme="dark"] #experience .portfolio-link { color:#c93d28 !important; }
+#experience .experience-status { color:#7c2f21 !important; background:#f3d8cf !important; }
+#experience .experience-number { background:#111 !important; color:#fff !important; }
+
+/* Selected-work hover uses the same coral accent */
+#work .work-row::before { background:#f04f35 !important; }
+#work .editorial-heading em { color:#f04f35 !important; -webkit-text-fill-color:#f04f35 !important; }
+
+/* CTA joins the same system instead of introducing blue */
+body .cta-section,
+html[data-theme="dark"] body .cta-section { background:#f04f35 !important; }
+.cta-section .cta-box { border-color:rgba(17,17,17,.24) !important; }
+.cta-section .btn-form { background:#111 !important; color:#fff !important; }
+
+/* Footer contrast and hierarchy */
+footer,
+html[data-theme="dark"] footer { background:#111 !important; border-top:1px solid #2d2d2d !important; color:#f5f2ec !important; }
+footer .logo,
+html[data-theme="dark"] footer .logo { color:#fff !important; }
+footer .logo span { color:#f04f35 !important; }
+footer .footer-link,
+html[data-theme="dark"] footer .footer-link { color:#d3cec5 !important; opacity:1 !important; }
+footer .footer-link:hover { color:#f04f35 !important; }
+footer p,
+footer .footer-copy,
+html[data-theme="dark"] footer p,
+html[data-theme="dark"] footer .footer-copy { color:#a9a49c !important; }
+footer .footer-copy a { color:#f17a63 !important; }
+footer .newsletter-input { background:#f3f0e9 !important; color:#111 !important; border:1px solid #f3f0e9 !important; }
+footer .newsletter-input::placeholder { color:#77736d !important; }
+footer .newsletter-btn { background:#f04f35 !important; color:#fff !important; }
+footer .newsletter-btn:hover { background:#fff !important; color:#111 !important; }
+footer [style*="color: var(--text-light)"] { color:#d3cec5 !important; }
+
+/* WhatsApp no longer competes with the portfolio accent */
+.whatsapp-floating { background:#1f9d62 !important; box-shadow:0 8px 30px rgba(31,157,98,.24) !important; }
+
+/* Improve muted copy on parchment */
+#experience .experience-item li,
+#experience .cv-project p,
+#experience .recognition-list span { color:#5b5751 !important; }
