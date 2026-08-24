@@ -1,0 +1,47 @@
+/* Benjamin-inspired editorial direction — adapted for Mehar Hassan */
+:root { --e-bg:#eeeae3; --e-ink:#101010; --e-line:#bdb8ae; --e-hot:#ff4f2e; --e-blue:#3157ff; }
+html,body,[data-theme="dark"] body { background:var(--e-bg) !important; color:var(--e-ink) !important; }
+body::before { display:none !important; }
+header,[data-theme="dark"] header { background:rgba(238,234,227,.84) !important; border-color:rgba(16,16,16,.16) !important; backdrop-filter:blur(18px); }
+.logo,.nav-link,[data-theme="dark"] .nav-link { color:var(--e-ink) !important; }
+.logo span { color:var(--e-hot) !important; }
+.nav-link.active::after { background:var(--e-ink) !important; }
+.nav-cta { background:var(--e-ink) !important; color:#fff !important; }
+
+.editorial-hero { min-height:100vh; padding:150px 0 45px; background:var(--e-bg); position:relative; overflow:hidden; }
+.editorial-hero::before { content:''; position:absolute; width:45vw; height:45vw; min-width:520px; min-height:520px; right:-10vw; top:7vh; border-radius:50%; background:#d7d2c9; }
+.editorial-wrap { max-width:1500px; position:relative; z-index:2; }
+.editorial-topline { display:flex; justify-content:space-between; padding-bottom:16px; border-bottom:1px solid var(--e-ink); font:700 11px var(--font-heading); letter-spacing:.12em; text-transform:uppercase; }
+.editorial-topline span:last-child { color:#65615b; }
+.editorial-title { position:relative; z-index:3; width:90%; margin:50px 0 0; font-size:clamp(80px,11vw,176px); line-height:.77; letter-spacing:-.085em; font-weight:800; color:var(--e-ink); }
+.editorial-title .indent { display:block; padding-left:17vw; }
+.editorial-title .thin { font-weight:400; }
+.editorial-title sup { color:var(--e-hot); font-size:.11em; vertical-align:top; margin-left:14px; letter-spacing:0; }
+.editorial-portrait { position:absolute; z-index:2; right:2vw; top:22vh; width:min(32vw,500px); height:min(62vh,650px); overflow:hidden; border-radius:50% 50% 4px 4px; background:#bbb5ab; }
+.editorial-portrait img { width:100%; height:100%; object-fit:cover; object-position:center top; filter:grayscale(1) contrast(1.05); transition:.5s ease; }
+.editorial-portrait:hover img { filter:grayscale(0) contrast(1.02); transform:scale(1.025); }
+.portrait-code { position:absolute; right:0; bottom:0; z-index:4; background:var(--e-blue); color:#fff; padding:14px 18px; font:700 11px var(--font-heading); letter-spacing:.1em; text-transform:uppercase; }
+.editorial-bottom { display:grid; grid-template-columns:1fr 1.4fr .7fr; gap:36px; align-items:end; margin-top:75px; padding-top:20px; border-top:1px solid var(--e-ink); }
+.editorial-bottom .eyebrow { font:700 11px var(--font-heading); letter-spacing:.13em; text-transform:uppercase; color:#5f5a53; }
+.editorial-bottom p { margin:0; max-width:570px; font-size:17px; line-height:1.65; }
+.editorial-scroll { justify-self:end; width:110px; height:110px; display:grid; place-items:center; border:1px solid var(--e-ink); border-radius:50%; color:var(--e-ink); text-decoration:none; font-weight:800; font-size:22px; transition:.3s; }
+.editorial-scroll:hover { background:var(--e-hot); color:#fff; border-color:var(--e-hot); transform:rotate(45deg); }
+.editorial-year { position:absolute; left:22px; top:50%; writing-mode:vertical-rl; transform:rotate(180deg); font:700 10px var(--font-heading); letter-spacing:.18em; }
+
+@media(max-width:1000px){
+  .editorial-hero { padding-top:130px; }
+  .editorial-title { width:100%; font-size:clamp(70px,14vw,130px); }
+  .editorial-title .indent { padding-left:8vw; }
+  .editorial-portrait { position:relative; right:auto; top:auto; width:75%; height:650px; margin:45px 0 0 auto; }
+  .editorial-bottom { grid-template-columns:1fr 2fr; }
+  .editorial-scroll { display:none; }
+}
+@media(max-width:600px){
+  .editorial-hero { min-height:auto; padding:105px 0 55px; }
+  .editorial-topline { gap:15px; }
+  .editorial-title { margin-top:35px; font-size:58px; line-height:.83; }
+  .editorial-title .indent { padding-left:0; }
+  .editorial-portrait { width:92%; height:470px; margin-top:35px; }
+  .editorial-bottom { grid-template-columns:1fr; margin-top:45px; }
+  .editorial-year { display:none; }
+}
