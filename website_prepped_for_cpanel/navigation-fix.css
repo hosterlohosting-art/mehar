@@ -1,0 +1,11 @@
+/* Navigation and hero overlap repair */
+.editorial-portrait { z-index:4 !important; }
+.portrait-code { right:18px !important; bottom:24px !important; z-index:8 !important; border-radius:999px; box-shadow:0 10px 30px rgba(0,0,0,.18); }
+.logo-marquee-section { position:relative; z-index:2; }
+
+@media(max-width:1000px){
+  .portrait-code { right:14px !important; bottom:18px !important; }
+}
+@media(max-width:600px){
+  .portrait-code { right:10px !important; bottom:12px !important; max-width:calc(100% - 20px); }
+}
