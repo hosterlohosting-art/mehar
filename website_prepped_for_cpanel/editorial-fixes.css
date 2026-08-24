@@ -1,0 +1,73 @@
+/* Final cascade repair: lock the editorial design to deliberate colors */
+html,html[data-theme="dark"] { background:#eeeae3 !important; }
+body,html[data-theme="dark"] body { background:#eeeae3 !important; color:#101010 !important; }
+
+/* Skills band: intentionally dark with readable light typography */
+#services.editorial-section.dark,
+html[data-theme="dark"] #services.editorial-section.dark { background:#101010 !important; color:#fff !important; }
+#services .skill-intro h2,
+html[data-theme="dark"] #services .skill-intro h2 { color:#fff !important; -webkit-text-fill-color:#fff !important; }
+#services .skill-intro p,
+html[data-theme="dark"] #services .skill-intro p { color:#c2c4c8 !important; }
+#services .skill-row h3,
+html[data-theme="dark"] #services .skill-row h3 { color:#fff !important; }
+#services .skill-tags span,
+html[data-theme="dark"] #services .skill-tags span { color:#d2d4d8 !important; border-color:rgba(255,255,255,.3) !important; background:transparent !important; }
+
+/* Selected work: intentionally light */
+#work.editorial-section,
+html[data-theme="dark"] #work.editorial-section { background:#eeeae3 !important; color:#101010 !important; }
+#work .editorial-heading h2,
+html[data-theme="dark"] #work .editorial-heading h2 { color:#101010 !important; -webkit-text-fill-color:#101010 !important; }
+#work .editorial-heading em { color:#ff4f2e !important; -webkit-text-fill-color:#ff4f2e !important; }
+#work .work-row,
+html[data-theme="dark"] #work .work-row { color:#101010 !important; border-color:rgba(16,16,16,.32) !important; }
+#work .work-row:hover { color:#fff !important; }
+#work .work-row:hover h3,
+#work .work-row:hover .num,
+#work .work-row:hover .type,
+#work .work-row:hover .year { color:#fff !important; }
+
+/* Professional profile and career: intentionally light */
+#experience.cv-section,
+html[data-theme="dark"] #experience.cv-section { background:#eeeae3 !important; color:#101010 !important; }
+#experience .section-title,
+html[data-theme="dark"] #experience .section-title { color:#101010 !important; -webkit-text-fill-color:#101010 !important; }
+#experience .section-subtitle,
+html[data-theme="dark"] #experience .section-subtitle { color:#625d55 !important; }
+#experience .cv-card,
+#experience .experience-item,
+#experience .cv-project,
+#experience .tools-card,
+html[data-theme="dark"] #experience .cv-card,
+html[data-theme="dark"] #experience .experience-item,
+html[data-theme="dark"] #experience .cv-project,
+html[data-theme="dark"] #experience .tools-card { background:transparent !important; color:#101010 !important; }
+#experience h3,
+#experience strong,
+html[data-theme="dark"] #experience h3,
+html[data-theme="dark"] #experience strong { color:#101010 !important; }
+#experience .cv-strength-list li,
+html[data-theme="dark"] #experience .cv-strength-list li { color:#101010 !important; background:transparent !important; border-color:#aaa59b !important; }
+#experience .recognition-list span,
+#experience .experience-item li,
+#experience .cv-project p,
+html[data-theme="dark"] #experience .recognition-list span,
+html[data-theme="dark"] #experience .experience-item li,
+html[data-theme="dark"] #experience .cv-project p { color:#625d55 !important; }
+#experience .tool-pills span,
+html[data-theme="dark"] #experience .tool-pills span { color:#101010 !important; background:transparent !important; border-color:#aaa59b !important; }
+
+/* About remains intentionally dark */
+body .section-padding:has(.about-grid),
+html[data-theme="dark"] body .section-padding:has(.about-grid) { background:#101010 !important; color:#fff !important; }
+.about-text .section-title,
+html[data-theme="dark"] .about-text .section-title { color:#fff !important; -webkit-text-fill-color:#fff !important; }
+
+/* CTA stays vivid blue */
+body .cta-section,
+html[data-theme="dark"] body .cta-section { background:#3157ff !important; color:#fff !important; }
+.cta-section h2,.cta-section p { color:#fff !important; }
+
+/* Remove legacy reveal washout while scrolling */
+.reveal { opacity:1 !important; transform:none !important; }
