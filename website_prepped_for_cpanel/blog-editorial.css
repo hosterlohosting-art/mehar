@@ -1,0 +1,61 @@
+/* Dedicated editorial journal layout */
+.journal-hero { padding:165px 0 85px; background:var(--page); border-bottom:1px solid var(--ink); }
+.journal-hero-top { display:flex; justify-content:space-between; align-items:center; gap:25px; margin-bottom:55px; font:700 10px var(--font-heading); letter-spacing:.14em; text-transform:uppercase; }
+.journal-hero-top span:last-child { color:var(--muted); }
+.journal-title { margin:0; max-width:1250px; color:var(--ink); font-size:clamp(76px,10vw,150px); line-height:.82; letter-spacing:-.08em; }
+.journal-title em { color:var(--coral); font-style:normal; font-weight:400; }
+.journal-intro { display:grid; grid-template-columns:180px minmax(0,650px); gap:28px; margin:65px 0 0 auto; width:70%; padding-top:20px; border-top:1px solid var(--ink); }
+.journal-intro strong { font:700 10px var(--font-heading); letter-spacing:.13em; text-transform:uppercase; }
+.journal-intro p { margin:0; color:var(--muted); font-size:17px; line-height:1.7; }
+
+.journal-content { padding:95px 0 120px; background:var(--page); }
+.featured-story { display:grid; grid-template-columns:180px minmax(0,1fr); gap:35px; padding:55px; color:#fff; background:var(--ink); text-decoration:none; transition:.3s ease; }
+.featured-story:hover { background:#191919; }
+.story-index { display:flex; flex-direction:column; justify-content:space-between; min-height:330px; color:#c4c0b8; font:700 10px var(--font-heading); letter-spacing:.12em; text-transform:uppercase; }
+.story-index strong { color:var(--coral); font-size:14px; }
+.featured-body { display:flex; flex-direction:column; }
+.featured-meta { display:flex; gap:15px; color:#aaa59d; font:700 10px var(--font-heading); letter-spacing:.11em; text-transform:uppercase; }
+.featured-body h2 { margin:50px 0 25px; max-width:950px; color:#fff; font-size:clamp(48px,6vw,88px); line-height:.95; letter-spacing:-.065em; }
+.featured-body p { max-width:720px; margin:0; color:#bdb8b0; font-size:16px; line-height:1.75; }
+.featured-link { margin-top:auto; padding-top:35px; color:var(--coral); font:700 11px var(--font-heading); letter-spacing:.1em; text-transform:uppercase; }
+
+.journal-list { margin-top:85px; border-top:1px solid var(--ink); }
+.journal-row { display:grid; grid-template-columns:90px minmax(0,1.4fr) minmax(250px,.65fr) 90px; gap:25px; align-items:center; padding:35px 0; color:var(--ink); border-bottom:1px solid var(--line); text-decoration:none; transition:.25s ease; }
+.journal-row:hover { padding-inline:18px; color:#fff; background:var(--coral); border-color:var(--coral); }
+.journal-row .number,.journal-row .date { font:700 10px var(--font-heading); letter-spacing:.1em; text-transform:uppercase; }
+.journal-row h3 { margin:0; color:inherit; font-size:clamp(30px,3.3vw,49px); line-height:1; letter-spacing:-.05em; }
+.journal-row p { margin:0; color:var(--muted); font-size:13px; line-height:1.55; }
+.journal-row:hover p { color:rgba(255,255,255,.82); }
+.journal-row .date { text-align:right; }
+
+@media(max-width:900px){
+  .journal-title { font-size:clamp(68px,13vw,112px); }
+  .journal-intro { width:85%; }
+  .featured-story { grid-template-columns:100px 1fr; padding:38px; }
+  .journal-row { grid-template-columns:55px 1fr 70px; }
+  .journal-row p { display:none; }
+}
+@media(max-width:600px){
+  .journal-hero { padding:115px 0 62px; }
+  .journal-hero-top { flex-direction:column; align-items:flex-start; margin-bottom:38px; }
+  .journal-title { font-size:55px; line-height:.88; }
+  .journal-intro { grid-template-columns:1fr; width:100%; margin-top:45px; gap:12px; }
+  .journal-intro p { font-size:15px; }
+  .journal-content { padding:55px 0 80px; }
+  .featured-story { grid-template-columns:1fr; gap:22px; padding:25px; }
+  .story-index { min-height:auto; flex-direction:row; }
+  .featured-body h2 { margin:30px 0 20px; font-size:39px; }
+  .featured-body p { font-size:14px; }
+  .featured-link { margin-top:35px; }
+  .journal-list { margin-top:55px; }
+  .journal-row { grid-template-columns:38px minmax(0,1fr); gap:12px; padding:26px 0; }
+  .journal-row h3 { font-size:29px; }
+  .journal-row .date { grid-column:2; text-align:left; color:var(--muted); }
+  .journal-row:hover { padding-inline:12px; }
+  .journal-row:hover .date { color:rgba(255,255,255,.75); }
+}
+@media(max-width:380px){
+  .journal-title { font-size:47px; }
+  .featured-body h2 { font-size:34px; }
+  .journal-row h3 { font-size:26px; }
+}
