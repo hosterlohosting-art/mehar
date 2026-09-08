@@ -13,7 +13,7 @@
     }));
   }
 
-  const revealTargets = document.querySelectorAll('.statement, .capabilities, .featured-work, .gallery-section, .principles, .credibility, .support-note, .contact');
+  const revealTargets = document.querySelectorAll('.statement, .capabilities, .featured-work, .gallery-section, .archive-section, .full-portfolio-section, .motion-section, .testimonials-section, .principles, .credibility, .support-note, .contact');
   revealTargets.forEach(target => target.setAttribute('data-reveal', ''));
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
@@ -27,3 +27,11 @@
     revealTargets.forEach(target => target.classList.add('is-visible'));
   }
 })();
+const motionVideos = document.querySelectorAll('.motion-video');
+motionVideos.forEach((video) => {
+  const resetVideo = () => { video.pause(); video.currentTime = 0; };
+  video.addEventListener('mouseenter', () => video.play().catch(() => {}));
+  video.addEventListener('mouseleave', resetVideo);
+  video.addEventListener('focus', () => video.play().catch(() => {}));
+  video.addEventListener('blur', resetVideo);
+});
